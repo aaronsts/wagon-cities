@@ -4,7 +4,7 @@ import React, { Component } from "react";
 // Redux + Actions
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-import setCities from "../actions";
+import { setCities } from "../actions";
 
 // Components
 import City from "../containers/city";
@@ -17,7 +17,7 @@ class CityList extends Component {
 
   render() {
     return (
-      <div className="list">
+      <div className="col-sm-4">
         {this.props.cities.map((city) => {
           return <City city={city} key={city.name} />;
         })}
